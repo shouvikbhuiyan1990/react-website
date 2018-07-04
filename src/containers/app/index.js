@@ -1,18 +1,18 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
-import Home from '../home'
-import About from '../about'
+import Home from '../home';
+import About from '../about';
+import './index.css';
 
 const App = () => (
   <div>
     <header>
-      <Link to="/">Home</Link>
-      <Link to="/about-us">About</Link>
+      <i className="fa fa-navicon nav-icon"></i>
     </header>
 
     <main>
       <Route exact path="/" component={Home} />
-      <Route exact path="/about-us" component={About} />
+      <Route exact path="/about-me" component={About} />
     </main>
   </div>
 )

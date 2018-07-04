@@ -1,0 +1,78 @@
+@keyframes flash {
+    0% {background: #eee;}
+    10% { background: #222; }
+    10.5% {background: #eee; }
+    11% { background: #222; }
+    20% { background: #222; }
+    20.5% { background: #eee; }
+    21% { background: #222; }
+    100% { background: #1e5799; }
+}
+
+@keyframes moovingSun {
+    from { left: -120%; top: 10%;}
+    to { left: 40%; top: 8%;}
+}
+
+@keyframes moovingCloud {
+    from { left: 5%; }
+    to { left: 40%; }
+}
+
+body {
+    height: 900px;
+    background: #222;
+    animation: flash 13s;
+    animation-delay: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transition: .5s;
+}
+
+#sun {
+    fill: #efe862;
+    padding: 1rem;
+}
+
+.sun {
+    animation: moovingSun 20s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background: #efe862;
+    border-radius: 50%;
+    position: absolute;
+    transition: .5s;
+    left: -120%;
+    top: 10%;
+    box-shadow: 1px 1px 200px 10px #fff;
+    -webkit-box-shadow: 1px 1px 200px 10px #fff;
+    -moz-box-shadow: 1px 1px 200px 10px #fff;
+}
+
+.cloud {
+    animation: moovingCloud 18s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    position: absolute;
+    transition: .5s;
+    left: 5%;
+    top: 10%;
+    
+}
+
+.profile-icons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 45%;
+    color: #fff;
+}
+
+.profile-icons i {
+    font-size: 32px;
+    color: #fff;
+    margin: 0 12px 0 5px;
+}
